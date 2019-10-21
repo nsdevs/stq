@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Stqalumm</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" type="text/css" href="http://admin.stqalumm.com/assets/style.css?13534">
+<style>
+.clamp{overflow:hidden;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical}
+.clamp-2{overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.clamp-3{overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical}
+.clamp-4{overflow:hidden;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical}
+</style>
+<body>
+<div class="w3-center" style="padding-top: 110px;">
+    <img src="logo.png" alt="" style="height: 160px;">
+    <br><br>
+    <button class="w3-round-xxlarge tes" style="background-color: #008CBA; font-size: 16px; padding: 14px 40px; ">
+        <div style="color:white;">Mulai Sekarang</div>
+    </button>
+    <p>Copyright &#9400; 2019</p>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".tes").click(function(){
+            /*
+            var createA = document.createElement('a');
+            createA.setAttribute('href', 'app.html');
+            createA.click();*/
+
+
+        $.ajax({
+            type : "GET",
+            url : "http://admin.stqalumm.com/app.php",
+            contentType: false,
+            cache: false,
+            success:function(data){
+                $("body").html(data);
+            },
+            error:function(data){
+                alert('Failed to load Data');
+            },
+        })
+        });
+    });
+</script>
+</body>
+</html>
